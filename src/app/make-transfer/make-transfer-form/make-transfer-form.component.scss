@@ -2,6 +2,10 @@
 .make-transfer{
     background-color:#FFF;
     margin-bottom:10px;
+    -webkit-box-shadow: -4px 0px 11px -1px rgba(105,104,105,0.9);
+    -moz-box-shadow: -4px 0px 11px -1px rgba(105,104,105,0.9);
+    box-shadow: -4px 0px 11px -1px rgba(105,104,105,0.9);
+    border-radius:10px;
     .header{
         position:relative;
         background-color: #0c8397;
