@@ -15,6 +15,13 @@ h2{
     .header{
         background-color: #0c8397;
         padding:20px;
+        position: relative;
+        .icon-briefcase{
+            position:absolute;
+            top:50%;
+            margin-top:-12px;
+            left:15px;
+        }
     }
     ul{
         padding:0 10px 10px 10px;
@@ -84,11 +91,11 @@ h2{
         background-position-y: center;
     }
     .filtrButton.active{
-        background-image:url('/assets/images/icons/arrow-up.png');
+        background-image:url('/assets/images/icons/arrow-up.jpg');
 
     }
     .filtrButton.descend.active{
-        background-image:url('/assets/images/icons/arrow-down.png');
+        background-image:url('/assets/images/icons/arrow-down.jpg');
     }
 }
 

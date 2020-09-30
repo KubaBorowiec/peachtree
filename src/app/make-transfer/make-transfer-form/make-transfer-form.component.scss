@@ -3,8 +3,17 @@
     background-color:#FFF;
     margin-bottom:10px;
     .header{
+        position:relative;
         background-color: #0c8397;
         padding: 10px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        .icon-arrow{
+            position:absolute;
+            top:50%;
+            margin-top:-12px;
+            left:15px;
+        }
     }
     h2{
         padding:0;
