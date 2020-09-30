@@ -1,0 +1,16 @@
+@import '../variable';
+.logo-container{
+    width:100%;
+    background-color:#FFF;
+    padding:10px 0px;
+    border-bottom:3px solid $maincolor;
+    margin-bottom:10px;
+    @media only screen and (min-width: $lg) {
+        margin-bottom:40px;
+    }
+    .logo{
+        margin-left:10%;
+        width:200px;
+    }
+}
+

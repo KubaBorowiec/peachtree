@@ -1,0 +1,27 @@
+<div class="transaction-container code-{{ transaction['categoryCode'] | categoryCode }} container" >
+    <div class="row">
+        
+        <span class="col-6 col-lg-2 verticalAlign date">
+            {{transaction['dates.valueDate'] | date: 'MMM dd y'}}
+        </span>
+        <span class="col-6 col-lg-2 logo-container verticalAlign" >
+            <img src="assets/images/icons/{{ transaction['logo'] | getImage}}" 
+            alt="Logo {{ transaction['merchant.name'] }}" loading="lazy"> 
+        </span>
+        <div class="col-6 col-lg-5 title">
+            <span class="name">
+                {{ transaction['merchant.name']}}
+            </span>
+            <span class="type">
+                {{ transaction['transaction.type']}}
+            </span>
+        </div>
+        <span class="col-6 col-lg-3 verticalAlign amount">
+            - &#36;{{ transaction['transaction.amountCurrency.amount'] |  number:'1.2-2' }}
+        </span>
+        <span>
+           
+        </span>
+    </div>
+</div>
+

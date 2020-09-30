@@ -1,0 +1,66 @@
+@import '../../../variable';
+
+.transaction-container{
+    border-bottom:2px solid #CCC;
+    border-top:none;
+    border-right:2px solid #CCC;
+    border-left:7px solid transparent;
+    background-color:#FFF;
+    padding:10px;
+    @media only screen and (min-width: $lg) {
+        padding:10px 30px;
+    }
+    .logo-container{
+        justify-content: center;
+        img{
+            width:40px;
+            filter: grayscale(100%);
+        }
+    }
+    &:hover{
+        .logo-container{
+            img{
+                filter: none;
+            }
+        }
+    }
+}
+.date{
+    padding:10px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    @media only screen and (min-width: $lg) {
+    justify-content:center;
+    }        
+}
+.title{
+
+    span{
+        display:block;
+    }
+    .name{
+        font-size:1.1rem;
+    }
+    .type{
+        font-weight:300;
+    }
+}
+.amount{
+    font-size:1.2rem;
+    justify-content: center;
+    @media only screen and (min-width: $lg) {
+        justify-content: right;
+    }
+}
+.verticalAlign{
+    display: flex;
+    align-items: center;
+}
+
+.code-12a580{border-left:10px solid #12a580;}
+.code-d51271{border-left:10px solid #d51271;}
+.code-c12020{border-left:10px solid #c12020;}
+.code-c89616{ border-left:10px solid #c89616;}
+.code-e25a2c{border-left:10px solid #e25a2c;}
+.code-fbbb1b{border-left:10px solid #fbbb1b;} 
+.code-1180aa{border-left:10px solid #1180aa}

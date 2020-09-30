@@ -1,0 +1,25 @@
+<div class="dialog-make-transfer container">
+    <h3>Do you want to make a transer?</h3>
+    <div class="info-container row">
+        <div class="info col-12 col-xl-3">
+          <span class="title">From account</span>
+          <span class="data">{{data.userName}}</span>
+        </div>
+        <div class="info col-12 col-xl-3">
+          <span class="title">Your balance</span>
+          <span class="data">&#36;{{data.userBalance  | number:'1.2-2'}}</span>
+        </div>
+        <div class="info col-12 col-xl-3">
+          <span class="title">To account</span>
+          <span class="data">{{data.toaccount}}</span> 
+        </div>
+        <div class="info col-12 col-xl-3">
+          <span class="title">Amount</span>
+          <span class="data">>&#36;{{data.amount | number:'1.2-2'}}</span>
+        </div>
+    </div>
+    <div class="button-container">
+      <button [mat-dialog-close] mat-flat-button color="basic" >Cancel</button>
+      <button mat-flat-button color="primary" [mat-dialog-close]="true">Transfer</button>
+    </div>
+</div>

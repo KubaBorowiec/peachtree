@@ -1,0 +1,94 @@
+@import '../../../variable';
+h2{
+    padding:0;
+    margin:0;
+    color:#FFF;
+    text-align:center;
+    font-weight:300;
+}
+.transcations-list{
+    background-color:#FFF;
+    @media only screen and (min-width: $lg) {
+        height:80vh;
+        overflow-y:auto;
+    }
+    .header{
+        background-color: #0c8397;
+        padding:20px;
+    }
+    ul{
+        padding:0 10px 10px 10px;
+        margin:0;
+        @media only screen and (min-width: $lg) {
+            padding:0 20px 20px 20px;
+        }
+        li{
+            padding:0;
+            margin:0;
+            list-style-type: none;
+        }
+    }
+    li:nth-child(1){
+        border-top:2px solid #CCC;
+    }
+}
+.filters{
+    margin:10px 0 10px 0;
+    padding:0 20px;
+    @media only screen and (min-width: $lg) {
+        text-align:right;
+        margin:10px 0 20px 0;
+    }
+    .clearSearch{
+        position: absolute;
+        top: 3px;
+        right: 10px;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: #000;
+        &:focus{
+            outline: none;
+        }
+    }
+    .sortby{
+        padding-right: 0;
+        font-size:0.8rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top:20px;
+        @media only screen and (min-width: $lgx) {
+            text-align:right;
+            margin-top:0;
+        }
+    }
+    .buttons{
+        text-align:center;
+        padding-right:0;
+        margin-top:20px;
+        @media only screen and (min-width: $lgx) {
+            text-align:right;
+            margin-top:0;
+        }
+    }
+    .filtrButton{
+        padding:5px 15px;
+        background-color:#FFF;
+        text-transform: uppercase;
+        cursor: pointer;
+        border:1px solid #CCC;
+        background-repeat:no-repeat;
+        background-position-x: right;
+        background-position-y: center;
+    }
+    .filtrButton.active{
+        background-image:url('/assets/images/icons/arrow-up.png');
+
+    }
+    .filtrButton.descend.active{
+        background-image:url('/assets/images/icons/arrow-down.png');
+    }
+}
+

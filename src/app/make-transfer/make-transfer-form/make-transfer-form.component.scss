@@ -1,0 +1,46 @@
+@import '../../../variable';
+.make-transfer{
+    background-color:#FFF;
+    margin-bottom:10px;
+    .header{
+        background-color: #0c8397;
+        padding: 10px;
+    }
+    h2{
+        padding:0;
+        margin:0;
+        font-size:1.2rem;
+        color:#FFF;
+        text-align:center;
+        font-weight:300;
+    }
+    .make-transfer-form{
+        padding:10px;
+    }
+    .form-group{
+        margin-top:7px;
+        @media only screen and (min-width: $lgx) {
+            margin-top:25px;
+        }
+    }
+    label{
+        text-transform: uppercase;
+        font-size:0.8rem;
+        font-weight: 500;
+    }
+    .invalid-feedback{
+        color:red;
+        font-size:0.75rem;
+    }
+    .button-container{
+        margin-top:10px;
+        text-align:center;
+        @media only screen and (min-width: $lgx) {
+            text-align:right;
+            margin-top:20px;
+        }
+        button{
+            width:60%;
+        }
+    }
+}

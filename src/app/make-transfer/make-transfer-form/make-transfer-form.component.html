@@ -1,0 +1,34 @@
+<div class="make-transfer">
+    <div class="header">
+        <h2>Make a transfer</h2>
+    </div>
+    <form class="make-transfer-form" [formGroup]="transferForm">
+        <div class="form-group">
+            <label for="fromaccount">From account</label>
+            <input  name="fromaccount"
+            class="peachtree" placeholder="{{userName}} -&#36;{{userBalance | number:'1.2-2'}}" id="fromaccount"disabled>
+        </div>
+        <div class="form-group">
+            <label for="toaccount">To account</label>
+            <input name="toaccount"
+            class="peachtree" placeholder="" id="toaccount" formControlName="toaccount">
+            <div *ngIf="submitted && transferForm.controls.toaccount.errors" class="invalid-feedback">
+                <div *ngIf="transferForm.controls.toaccount.errors.required">To account is required</div>
+                <div *ngIf="transferForm.controls.toaccount.errors.minlength">Min lenght 3 charsets</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" class="peachtree" placeholder="" id="amount"  formControlName="amount">
+            <div  *ngIf="submitted && transferForm.controls.amount.errors" class="invalid-feedback">
+                <div *ngIf="transferForm.controls.amount.errors.required">Amount is required</div>
+                <div *ngIf="transferForm.controls.amount.errors.pattern">
+                Max two decimal places</div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="submit" mat-flat-button color="primary" (click)="submitMakeTransfer()"
+            >Submit</button>
+        </div>    
+    </form>
+</div>
