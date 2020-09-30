@@ -8,7 +8,7 @@
         <div class="filters row">
             <div class="search col-12 col-lg-12 off-lg-3 col-xl-5">
                 <input class="peachtree" [(ngModel)]="textSearch" (ngModelChange)="searchTransaction(textSearch)"
-                placeholder="Search by typing">
+                placeholder="Search by typing (name, transaction type)">
                 <button class="clearSearch" (click)="textSearch='';searchTransaction(textSearch)">x</button>
             </div>
             <div class="sortby col-1 col-md-3 col-lg-4 col-xl-1">
