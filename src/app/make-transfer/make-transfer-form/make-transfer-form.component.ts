@@ -6,7 +6,7 @@ import {DialogWarningComponent} from '../../dialogs/dialog-warning/dialog-warnin
 import {MessageService} from '../../services/messeger.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-const maxBalance = -5000;
+const maxBalance = -500;
 
 @Component({
   selector: 'app-make-transfer-form',
@@ -17,7 +17,7 @@ export class MakeTransferFormComponent implements OnInit {
   transferForm: FormGroup;
   submitted = false;
   public userName:string="Free checking(4692)";
-  public userBalance:number= 3412.2;
+  public userBalance:number= -100.2;
   public amount:number; 
   public toaccount:string = '';
   decimalPatern=/^(\d+(?:[\.\,]\d{1,2})?)$/;
@@ -49,7 +49,7 @@ export class MakeTransferFormComponent implements OnInit {
   openDialogErrorTransfer():void{
     const dialogRef = this.dialog.open(DialogWarningComponent,{
       width:'auto',height:'auto', autoFocus:true,
-      data:{notify:'You can not overdraft their account beyond a balance of $ -500.00'}});  
+      data:{notify:'You can not overdraft their account beyond a balance of -$500.00'}});  
   }
 
   oopenDialogMakeTransfer():void {

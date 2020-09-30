@@ -7,7 +7,7 @@
         </div>
         <div class="info col-12 col-xl-3">
           <span class="title">Your balance</span>
-          <span class="data">&#36;{{data.userBalance  | number:'1.2-2'}}</span>
+          <span class="data">{{data.userBalance  | currency:'USD':'symbol':'1.1-2'}}</span>
         </div>
         <div class="info col-12 col-xl-3">
           <span class="title">To account</span>
@@ -15,7 +15,7 @@
         </div>
         <div class="info col-12 col-xl-3">
           <span class="title">Amount</span>
-          <span class="data">>&#36;{{data.amount | number:'1.2-2'}}</span>
+          <span class="data">{{data.amount | currency:'USD':'symbol':'1.1-2'}}</span>
         </div>
     </div>
     <div class="button-container">
