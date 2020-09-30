@@ -20,7 +20,7 @@ import { DialogWarningComponent } from './dialogs/dialog-warning/dialog-warning.
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { GetCurrencyPipe } from './pipes/get-currency.pipe';
+
 
 
 
@@ -35,7 +35,6 @@ import { GetCurrencyPipe } from './pipes/get-currency.pipe';
     MakeTransferFormComponent,
     DialogMakeTransferComponent,
     DialogWarningComponent,
-    GetCurrencyPipe
   ],
   imports: [
     BrowserModule,

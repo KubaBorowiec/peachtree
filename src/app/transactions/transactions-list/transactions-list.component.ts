@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {MessageService} from '../../services/messeger.service';
+import {MessegeService} from '../../services/messeger.service';
 import {MockTransactionsService} from './../../services/mock-transactions.service';
 
 @Component({
@@ -19,32 +19,31 @@ export class TransactionsListComponent implements OnInit, OnDestroy {
     'active':''
   }
   constructor(private transactionsService: MockTransactionsService,
-    private messageService:MessageService) { 
+    private messegeService:MessegeService) { 
   }
   ngOnInit() {  
-    this.getTransactions();
-    this.subscription = this.messageService.getMessage().subscribe(message => {
-      if (message['update']) {
+    this.getTransactions(); //initial data
+    this.subscription = this.messegeService.getMessage().subscribe(message => {
+      if (message['update']) { //from subject add new transaction one to top of transactions 
         this.transactions.unshift(message['newTransaction']);
         this.sortingControl.active='';
       }
     });
   }
-
+    /*From Transaction API*/
   getTransactions():void{
     this.transactionsService.getTransactions()
     .subscribe( data =>{
         this.transactions = data;
-        console.log(data);
     });
   }
-
+  /*From Transaction API*/
   searchTransaction(textSearch):void {
     this.transactionsService.searchTransacions(textSearch).subscribe(data=>{
       this.transactions = data;
     }); 
   }
-  /*SORTING*/
+  /*SORTING on displayed transaction*/
   sortByAmount(sortingDesc:boolean){
     this.sortingControl.active = 'amount';
     this.sortingControl.amountDesc = !this.sortingControl.amountDesc;

@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import * as transactionsJSON from './../assets/transactions.json';
+import * as transactionsJSON from './../mock/transactions.json';
 
 
 
@@ -7,7 +7,7 @@ export class InMemoryDataService implements InMemoryDbService {
 
   constructor() {}
 
-  /*Flotten JSON Transactions*/
+  /*Flotten JSON funcions*/
   traverseAndFlatten(currentNode, target, flattenedKey?) {
     for (var key in currentNode) {
         if (currentNode.hasOwnProperty(key)) {
@@ -37,6 +37,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     var transFlatten = [];
     var imageMock=[];
+    /*Floatten json and add new properties*/
     transactionsJSON['default'].data.forEach((element,index) => {
       element.id = index;
       element.logo = element['merchant'].name.toLocaleLowerCase().replace(/ /g,'-') + '.png';

@@ -1,0 +1,62 @@
+Jakub Borowiec
+
+#Tech stack:
+
+1. Framework: Angular 9
+2. Bootstra 4 -  grid
+3. Angular Material - Dialog, Buttons 
+4. In memory web api
+
+ 
+#How to star project
+
+1.clone https://github.com/KubaBorowiec/peachtree
+2.cmd --> ng serve
+
+#Live demo:
+https://focused-rosalind-a38adb.netlify.app/  on netlify
+
+#Data is mock from transaction.json
+
+transaction.json --> in memory web api ---> Mock Transaction API --> Transactions service (HTTPClient) 
+
+#memory web api 
+1 Transaction json is export as a json module
+2.Json is flattened to new object
+3.Add new properties "id" and "logo"
+4.Creating Transaction API 
+
+#Components hierarchy:
+
+app
+  - make-transfer-form	  
+  - product-list 
+    - product-one 
+
+#product-list compoment
+
+1.On init get a list of transaction, using Trnasaction service
+2.Searching Transaction in "name" and "type transaction", using Transaction service   
+3.Filter on displayed data, toogle filtred
+4.Displayed newTransaction on update message
+
+#make-transfer-form compoment
+
+1.On submit validation and check codndition: userBalance - amount > -500
+2.If condition true: display transfer dialog(popup) 
+   On accept:
+	-create a new transaction  
+	-send a "update" message (Subject) to product-list, display on top of list
+	-add a newTransaction to Web API  
+3.If condition fasle: display warning dialog
+
+
+#Responsive web desinge
+#Images optimalization
+#Lazy loading images for transactions list
+
+
+ 
+
+ 
+
