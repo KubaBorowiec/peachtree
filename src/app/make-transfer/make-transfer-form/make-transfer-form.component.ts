@@ -44,14 +44,14 @@ export class MakeTransferFormComponent implements OnInit {
       this.openDialogMakeTransfer();         
     }
     else{
-      this.openDialogErrorTransfer(); 
+      this.openDialogWarningTransfer(); 
 
     }
   }
-  openDialogErrorTransfer():void{
+  openDialogWarningTransfer():void{
     const dialogRef = this.dialog.open(DialogWarningComponent,{
       width:'auto',height:'auto', autoFocus:true,
-      data:{notify:'You can not overdraft their account beyond a balance of -$500.00'}});  
+      data:{notify:'You cannot overdraft your account beyond a balance of: -$500.00'}});  
   }
 
   openDialogMakeTransfer():void {
